@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+ki@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 
 /* Reset default margin and padding */
 * {
@@ -316,11 +316,11 @@
   }
 
   .content-section .card2 h1{
-    font-size: clamp(0.6rem, 1.3vw, 1.6rem);
+    font-size: clamp(0.4rem, 1.1vw, 1.6rem);
   }
 
   .content-section .card2 p{
-    font-size: clamp(0.2rem, 0.7vw, 1.2rem);
+    font-size: clamp(0.1rem, 0.5vw, 1.2rem);
   }
 }  
 
