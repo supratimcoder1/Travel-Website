@@ -307,7 +307,7 @@ ki@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..90
 /* For Mobile Screens */
 @media screen and (max-width: 520px) {
   .content-body{
-    width: 260px;
+    width: 350px;
   }
 
   .content-section{
