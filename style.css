@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styling the header part*/
+  .header{
+    position: relative;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0, 0, 0, 0.5)),url('/images/walpaper.jpg');
+    background-color: #fffffffd;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Style the navigation bar */
+  nav {
+    color: #ffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 25px 8;
+    letter-spacing: 0.75px;
+    z-index: 5;
+  }
+  
+  /* Style the logo */
+  .logo {
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo h1{
+    font-size: 1.7rem;
+    font-weight: 1500;
+  }
+
+  /* Style the navigation links */
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .nav-links li {
+    padding: 0px 10px;
+  }
+  
+  .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.6s;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+  
+  .nav-links li a:hover, .nav-links li a:focus{
+    color: rgb(226, 33, 33);
+  }
+
+  .nav-links li a::after{
+    content: "";
+    height: 4px;
+    width: 0%;
+    background: rgb(59, 47, 221);
+    position: absolute;
+    left: 0;
+    bottom: -25px;
+    transition: all 0.4s;
+    pointer-events: none;
+  }
+
+  .nav-links li a:hover::after, .nav-links li a:focus::after{
+    width: 100%;
+  }
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .nav-links {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1.2s ease-in-out;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: #4e7dd4cd;
+      padding: 10px 0px;
+      z-index: 2;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+  }
+
+  .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  .nav-links li a {
+      color: #f7f7f7;
+      text-decoration: none;
+  }
+
+  .nav-links li a:hover, .nav-links li a:focus {
+      color: rgb(226, 33, 33);
+  }
+
+  .nav-links li a::after{
+    content: "";
+    height: 4px;
+    width: 0%;
+    background: rgb(59, 47, 221);
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    transition: all 0.4s;
+    pointer-events: none;
+  }
+
+  .nav-links li a:hover::after, .nav-links li a:focus::after{
+    width: 100%;
+  }
+
+  /* Hamburger Icon */
+  .menu-icon {
+      display: block;
+      cursor: pointer;
+      color: #ffffff;
+      font-size: 1.8rem;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 2; /* Ensure the icon is above the navigation links */
+    }
+    
+  /* Hide Hamburger Icon when menu is active */
+  .menu-icon.active {
+      visibility: hidden;
+  }
+
+  /* Cross Icon (added when menu is active) */
+  .menu-icon.active:before {
+    content: "\00D7"; /* Unicode for '×' symbol */
+    position: absolute;
+    font-size: 2.2rem;
+    color: #ffff;
+    visibility: visible;
+  }
+}
+
+/* Media Query for Larger Screens */
+@media screen and (min-width: 769px) {
+  .menu-icon {
+      display: none;
+  }
+}
+
+/* Content body */
+.content-body{
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+  width: 80%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 90px;
+  padding-top: 90px;
+}
+
+.content-section{
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.75;
+}
+
+/* Image Section */
+.content-section .card1{
+  flex: 1;
+  margin: 20px 20px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Text Section */
+.content-section .card2{
+  margin: 20px 20px;
+}
+
+.content-section .card1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.content-section .card1:hover img{
+  transform: scale(1.25);
+}
+
+.content-section .card2 p{
+  font-family: "Source Code Pro", monospace;
+  line-height: 1.5;
+  position: relative;
+  text-align: justify;
+  font-size: clamp(0.8rem, 2vw, 1.8rem);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.content-section .card2 h1{
+  color: red;
+  position: relative;
+  text-align: justify;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  font-size: clamp(1.5rem, 2.25vw, 3rem);
+  text-transform: capitalize;
+  padding-bottom: 12%;
+}
+
+/* Tyewriter Animation */
+.content-section .card2 p::before{
+  content: '';
+  color: #002364;
+  animation: words 20s infinite;
+}
+
+.content-section .card2 p::after{
+  content: '';
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  right: -8px;
+  background-color: #ffffff;
+  border-left: 2px solid #c0885e;
+  animation: cursor 0.8s infinite, typing 20s steps(20) infinite;
+}
+
+@keyframes cursor{
+  to{
+      border-left: 2px solid #2e2424;
+  }
+}
+
+@keyframes words{
+  0%,20%{
+      content: "witness nature's wonders.";  
+  }
+  21%,40%{
+      content: 'experience the greatness.';  
+  }
+  41%,60%{
+      content: 'explore the world beyond.';  
+  }
+  61%,80%{
+      content: 'venture into the unknown.';
+  }
+  81%,100%{
+      content: 'journey to find yourself.';
+  }
+}
+
+@keyframes typing{
+  10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+      width: 0;
+  }
+  5%,20%,25%,40%,45%,60%,65%,80%,85%{
+      width: calc(100% + 8px);
+  }
+}
+
+/* For Smaller Screens */
+@media screen and (max-width: 799px) {
+  .content-body{
+    width: 100%;
+  }
+
+  .content-section{
+    flex-direction: column;
+  }
+} 
+
+/* For Mobile Screens */
+@media screen and (max-width: 520px) {
+  .content-body{
+    width: 100%
+  }
+
+  .content-section{
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .content-section .card2 h1{
+    font-size: clamp(0.85rem, 1.3vw, 1.6rem);
+  }
+
+  .content-section .card2 p{
+    font-size: clamp(0.45rem, 0.8vw, 1.2rem);
+  }
+}  
+
+/* Main Body Styling */
+.main-body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+
+
+
+
+/* Scroll Bar Styling */
+::-webkit-scrollbar{
+  width: 15px;
+}
+
+::-webkit-scrollbar-track{
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(rgb(40, 51, 198),rgb(198, 93, 28));
+  border-radius: 15px;
+  border: 2px solid #ffffff;
+}
