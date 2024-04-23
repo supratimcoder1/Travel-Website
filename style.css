@@ -11,7 +11,7 @@
   .header{
     position: relative;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0, 0, 0, 0.5)),url('/images/walpaper.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0, 0, 0, 0.5)),url('./images/walpaper.jpg');
     background-color: #fffffffd;
     background-position: center;
     background-repeat: no-repeat;
@@ -320,7 +320,7 @@
   }
 
   .content-section .card2 p{
-    font-size: clamp(0.45rem, 0.8vw, 1.2rem);
+    font-size: clamp(0.3rem, 0.7vw, 1.2rem);
   }
 }  
 
