@@ -242,6 +242,20 @@
   padding-bottom: 12%;
 }
 
+.content-section .card2 .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+  background: linear-gradient(90deg,rgb(192, 72, 28), rgb(132, 31, 166));
+  border-radius: 10px;
+}
+
 /* Tyewriter Animation */
 .content-section .card2 p::before{
   content: '';
@@ -321,6 +335,11 @@
 
   .content-section .card2 p{
     font-size: clamp(0.5rem, 1vw, 1.2rem);
+  }
+
+  .content-section .card2 .btn{
+    font-size: 0.3rem;
+    padding: 0.2rem;
   }
 }  
 
