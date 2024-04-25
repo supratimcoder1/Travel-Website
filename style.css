@@ -89,7 +89,7 @@
   .nav-links {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 1.2s ease-in-out;
+      transition: max-height 0.5s ease-in-out;
       flex-direction: column;
       position: absolute;
       top: 70px;
