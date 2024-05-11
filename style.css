@@ -518,7 +518,7 @@
   opacity: 0;
   filter: blur(5px);
   transform: translateX(100%);
-  transition: all 0.8s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .main-body .box-content .show .sec2{
