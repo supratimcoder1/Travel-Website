@@ -17,3 +17,42 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.remove('active');
     });
 });
+
+// Box Animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+        else {
+            entry.target.classList.remove('show');
+        }
+    })
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
+
+// Active Nav Link
+const navItems = document.querySelectorAll('.nav-item');
+const sectionElements = document.querySelectorAll('.section-list');
+
+let currentSection = 'header';
+window.addEventListener('scroll' , () => {
+    sectionElements.forEach((section) => {
+        if (window.scrollY >= section.offsetTop - 85) {
+            currentSection = section.id;
+        }
+    });
+
+
+    navItems.forEach((navItem) => {
+        if (navItem.href.includes(currentSection)) {
+            navItem.classList.add('active');
+        }
+        else {
+            navItem.classList.remove('active');
+        }
+    });
+});

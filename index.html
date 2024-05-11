@@ -5,47 +5,232 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Travel Website</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="./images/nav_logo.png">
 </head>
 
 <body>
-  <div class="header">
+  <header>
     <nav>
       <div class="logo">
-        <a href="./index.html">
+        <a href="#header">
           <img src="./images/nav_logo.png" alt="icon" width="50px">
+          <h1>Travelify</h1>
         </a>
-        <h1>Travelify</h1>
       </div>
       <div class="menu-icon">&#9776;</div>
       <ul class="nav-links">
-        <!-- <li><a href="#">Home</a></li> -->
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Packages</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a class="nav-item active" href="#home">Home</a></li>
+        <li><a class="nav-item" href="#destinations">Destinations</a></li>
+        <li><a class="nav-item" href="#about">About</a></li>
+        <li><a class="nav-item" href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="content-body">
-      <div class="content">
-        <div class="content-section">
-          <div class="card2">
-            <h1>Travel is LOVE</h1>
-            <p></p>
-            <a href="#main-body" class="btn">Click here</a>
-          </div>
-          <div class="card1">
-            <img src="./images/pic1.jpg" alt="pic1">
+  </header>
+  <main>
+    <section id="home" class="section-list">
+      <div class="content-body">
+        <img src="./images/walpaper.jpg" alt="walpaper">
+        <div class="content">
+          <div class="content-section">
+            <div class="card2">
+              <h1>Travel is LOVE</h1>
+              <p></p>
+              <a href="#destinations" class="btn">Click here</a>
+            </div>
+            <div class="card1">
+              <img src="./images/home.jpg" alt="pic1">
+              <div class="image-content">
+                <h1>Travel the world to witness the beauties of nature and the wonders of human civilisation</h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div id="main-body" class="main-body">
-    <div class="box-content"></div>
-  </div>
-  <script src="./script.js"></script>
+    </section>
+    <section id="destinations" class="section-list">
+      <div class="main-body">
+        <h1>Places to Explore</h1>
+        <div class="box-content">
+          <section class="hidden">
+            <div class="box sec1">
+              <div class="image-box">
+                <img src="./images/eiffel-france.jpg" alt="eiffel-france">
+                <div class="image-text">
+                  <p>An iconic symbol of Paris and human achievement, the Eiffel Tower soars with elegance and
+                    innovation, captivating hearts with its timeless charm and panoramic views.</p>
+                </div>
+              </div>
+              <h3>France, Europe</h3>
+              <div class="para-box">
+                <p>Indulge yourself in the romance and elegance of France. From the iconic landmarks of Paris to the
+                  rolling
+                  vineyards of Bordeaux and the lavender fields of Provence, the tourists lose themselves
+                  in a world where art, culture, and gastronomy
+                  intertwine in a tapestry of delights.</p>
+              </div>
+              <a href="https://www.tripadvisor.in/Attractions-g187070-Activities-oa0-France.html" class="btn">Read
+                more</a>
+            </div>
+          </section>
+          <section class="hidden">
+            <div class="box sec1">
+              <div class="image-box">
+                <img src="./images/fuji-japan.jpg" alt="fuji-japan">
+                <div class="image-text">
+                  <p>Majestic and serene, Mount Fuji commands awe with its perfect cone shape, symbolizing Japan's
+                    natural beauty and spiritual significance.</p>
+                </div>
+              </div>
+              <h3>Japan, Asia</h3>
+              <div class="para-box">
+                <p>Immerse yourself in the traditions and innovations of Japan, 'The Land of the Rising Sun'. From the serene temples of Kyoto to the
+                  bustling streets of Tokyo and the scenic beauty of Mount Fuji, where ancient customs and modern
+                  technology coexist in perfect harmony.
+                </p>
+              </div>
+              <a href="https://www.tripadvisor.in/Attractions-g294232-Activities-oa0-Japan.html" class="btn">Read
+                more</a>
+            </div>
+          </section>
+          <section class="hidden">
+            <div class="box sec1">
+              <div class="image-box">
+                <img src="./images/giza-egypt.jpg" alt="giza-egypt">
+                <div class="image-text">
+                  <p>Ancient wonders shrouded in mystery, the Pyramids of Giza stand as enduring monuments to human
+                    ambition and architectural prowess, embodying the timeless legacy of ancient Egypt.</p>
+                </div>
+              </div>
+              <h3>Egypt, Africa</h3>
+              <div class="para-box">
+                <p>Unravel the mysteries of ancient Egypt, from the iconic pyramids of Giza to the majestic temples of
+                  Luxor and the tranquil waters of the Nile River, where millennia-old artifacts and archaeological
+                  wonders tell the story of one of the world's greatest civilizations.</p>
+              </div>
+              <a href="https://www.tripadvisor.in/Attractions-g294200-Activities-oa0-Egypt.html" class="btn">Read
+                more</a>
+            </div>
+          </section>
+          <section class="hidden">
+            <div class="box sec2">
+              <div class="image-box">
+                <img src="./images/niagara-canada.jpg" alt="niagara-canada">
+                <div class="image-text">
+                  <p>Nature's breathtaking spectacle, Niagara Falls cascades with magnificent power and grace,
+                    captivating all who behold its awe-inspiring beauty and grandeur.</p>
+                </div>
+              </div>
+              <h3>Canada, North America</h3>
+              <div class="para-box">
+                <p>Explore the natural wonders and cultural diversity of Canada, from the rugged beauty of Banff
+                  National Park to the vibrant streets of Toronto and the historic neighborhoods of Quebec City, where
+                  adventures and experiences await around every corner.</p>
+              </div>
+              <a href="https://www.tripadvisor.in/Attractions-g153339-Activities-oa0-Canada.html" class="btn">Read
+                more</a>
+            </div>
+          </section>
+          <section class="hidden">
+            <div class="box sec2">
+              <div class="image-box">
+                <img src="./images/pisa-italy.jpg" alt="pisa-italy">
+                <div class="image-text">
+                  <p>An iconic architectural marvel, the Leaning Tower of Pisa stands as a testament to both human
+                    ingenuity and engineering
+                    challenges, captivating the world with its distinctive tilt and timeless allure.</p>
+                </div>
+              </div>
+              <h3>Italy, Europe</h3>
+              <div class="para-box">
+                <p>Experience the art, history, and flavors of Italy, from the ancient ruins of Rome to the Renaissance
+                  treasures of Florence and the charming coastal villages of Cinque Terre, where every corner tells a
+                  story of the country's rich past.</p>
+              </div>
+              <a href="https://www.tripadvisor.in/Attractions-g187768-Activities-oa0-Italy.html" class="btn">Read
+                more</a>
+            </div>
+          </section>
+          <section class="hidden">
+            <div class="box sec2">
+              <div class="image-box">
+                <img src="./images/taj-india.jpg" alt="taj-india">
+                <div class="image-text">
+                  <p>A testament to eternal love and architectural brilliance, the Taj Mahal enchants with its ethereal
+                    beauty and
+                    intricate craftsmanship, standing as a sublime masterpiece of Mughal architecture.</p>
+                </div>
+              </div>
+              <h3>India, Asia</h3>
+              <div class="para-box">
+                <p>Enjoy yourself by witnessing India's cultural kaleidoscope, from the majestic peaks of the Himalayas
+                  to the bustling streets of Delhi, where ancient temples, bustling markets, and vibrant festivals
+                  showcase the country's diverse heritage.</p>
+              </div>
+              <a href="https://www.tripadvisor.in/Attractions-g293860-Activities-oa0-India.html" class="btn">Read
+                more</a>
+            </div>
+          </section>
+          <section class="hidden">
+            <div class="box sec1">
+              <div class="image-box">
+                <img src="./images/les7-mauritius.jpg" alt="les7-mauritius">
+                <div class="image-text">
+                  <p>A natural masterpiece nestled amidst Mauritius' verdant landscapes, Les 7 Cascades stands as a
+                    testament to nature's grandeur and tranquil allure, adorning the island's wilderness with seven
+                    graceful waterfalls.</p>
+                </div>
+              </div>
+              <h3>Mauritius, Africa</h3>
+              <div class="para-box">
+                <p>Escape to paradise in Mauritius, where pristine beaches, turquoise lagoons, and lush landscapes beckon travelers to unwind and explore. From the azure waters to the rugged cliffs and the
+                  bustling markets, Mauritius offers a wealth of experiences for nature lovers and travelers alike.</p>
+              </div>
+              <a href="https://www.tripadvisor.in/Attractions-g293816-Activities-oa0-Mauritius.html" class="btn">Read more</a>
+            </div>
+          </section>
+          <section class="hidden">
+            <div class="box sec1">
+              <div class="image-box">
+                <img src="./images/wall-china.jpg" alt="wall-china">
+                <div class="image-text">
+                  <p>Spanning centuries and landscapes, the Great Wall of China stands as a monumental feat of human
+                    endeavor and defensive ingenuity, embodying China's rich history and cultural resilience.</p>
+                </div>
+              </div>
+              <h3>China, Asia</h3>
+              <div class="para-box">
+                <p>Discover a journey through the landscapes and traditions of China, from the ancient wonders of the
+                  Great Wall to the modern skylines of Shanghai and Hong Kong, where centuries-old temples stand
+                  alongside bustling markets and vibrant street food stalls.</p>
+              </div>
+              <a href="https://www.tripadvisor.in/Attractions-g294211-Activities-oa0-China.html" class="btn">Read more</a>
+            </div>
+          </section>
+          <section class="hidden">
+            <div class="box sec1">
+              <div class="image-box">
+                <img src="./images/parthenon-greece.jpg" alt="parthenon-greece">
+                <div class="image-text">
+                  <p>A beacon of classical artistry and architectural perfection, the Parthenon stands atop the Athenian
+                    Acropolis as a timeless tribute to ancient Greece's cultural zenith and philosophical ideals.</p>
+                </div>
+              </div>
+              <h3>Greece, Europe</h3>
+              <div class="para-box">
+                <p>From the ancient Acropolis in Athens to the sun-drenched Greek Islands, Greece beckons with its rich
+                  history and stunning landscapes, offering archaeological wonders, quaint villages, and mouthwatering
+                  cuisine. Explore ruins, beaches, and immerse in vibrant culture.</p>
+              </div>
+              <a href="https://www.tripadvisor.in/Attractions-g189398-Activities-oa0-Greece.html" class="btn">Read more</a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  
+  </main>
+  <script src="script.js"></script>
 </body>
 
-</html>
+</html
